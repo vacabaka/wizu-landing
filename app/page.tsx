@@ -1,7 +1,7 @@
 import { FlowFeatures } from "@/components/sections/FlowFeatures";
 import { WaitlistForm } from "@/components/sections/WaitlistForm";
 import { Footer } from "@/components/sections/Footer";
-import { HeroSection } from "@/components/ui/hero-section-with-smooth-bg-shader";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import { CTASection } from "@/components/ui/hero-dithering-card";
 
 export default function Home() {
@@ -20,14 +20,20 @@ export default function Home() {
                     </a>
                 </nav>
 
-                <HeroSection
-                    title="Design your english"
-                    highlightText="made simple"
-                >
-                    <div className="w-full max-w-md pt-8">
-                        <WaitlistForm variant="light" />
+                <AuroraBackground className="min-h-screen">
+                    <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
+                        <h1 className="font-serif text-5xl md:text-7xl tracking-tight text-[var(--text-primary)] leading-[1.1] mb-8">
+                            Design your english <br />
+                            <span className="text-[var(--accent-primary)] italic">made simple</span>
+                        </h1>
+                        <p className="text-xl text-[var(--text-secondary)] leading-relaxed max-w-2xl mb-12">
+                            The all-in-one browser that makes it easy to master English. Contextual explanations, native content, and AI assistance while you surf.
+                        </p>
+                        <div className="w-full max-w-md">
+                            <WaitlistForm variant="light" />
+                        </div>
                     </div>
-                </HeroSection>
+                </AuroraBackground>
 
                 <FlowFeatures />
 
