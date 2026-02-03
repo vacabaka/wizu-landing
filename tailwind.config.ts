@@ -66,6 +66,7 @@ const config: Config = {
         "float": "float 6s ease-in-out infinite",
         "fade-in": "fadeIn 0.5s ease-out forwards",
         aurora: "aurora 60s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
         float: {
@@ -82,6 +83,11 @@ const config: Config = {
           },
           to: {
             backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
           },
         },
       },
