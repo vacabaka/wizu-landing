@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Backgrounds */
+        --bg-primary: #F8F6F1;
+        /* Warm Cream */
+        --bg-secondary: #FFFFFF;
+        /* White cards */
+        --bg-tertiary: #F5F0E8;
+        /* Slightly darker cream for hovers */
+
+        /* Text */
+        --text-primary: #1C1917;
+        /* Stone 900 */
+        --text-secondary: #57534E;
+        /* Stone 600 */
+        --text-muted: #A8A29E;
+        /* Stone 400 */
+
+        /* Accents */
+        --accent-primary: #D97706;
+        /* Amber 600 - Main Brand */
+        --accent-hover: #B45309;
+        /* Amber 700 */
+        --accent-light: #FEF3C7;
+        /* Amber 100 - Backgrounds */
+
+        --accent-success: #059669;
+        /* Emerald 600 */
+        --accent-success-bg: #D1FAE5;
+        /* Emerald 100 */
+
+        --accent-warning: #EA580C;
+        /* Orange 600 */
+        --accent-warning-bg: #FFEDD5;
+        /* Orange 100 */
+
+        --accent-info: #0284C7;
+        /* Sky 600 */
+        --accent-info-bg: #E0F2FE;
+        /* Sky 100 */
+
+        /* Borders & Dividers */
+        --border-subtle: #E7E5E4;
+        /* Stone 200 */
+        --border-strong: #D6D3D1;
+        /* Stone 300 */
+
+        /* Shadcn/Tailwind Mappings */
+        --background: 40 20% 96%;
+        /* #F8F6F1 approx hsl */
+        --foreground: 24 10% 10%;
+        /* Stone 900 */
+
+        --card: 0 0% 100%;
+        --card-foreground: 24 10% 10%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 24 10% 10%;
+
+        --primary: 38 92% 50%;
+        /* Amber 600 */
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 40 20% 96%;
+        --secondary-foreground: 24 5% 35%;
+
+        --muted: 40 20% 94%;
+        --muted-foreground: 24 5% 65%;
+
+        --accent: 40 20% 94%;
+        --accent-foreground: 24 10% 10%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 24 10% 90%;
+        --input: 24 10% 90%;
+        --ring: 38 92% 50%;
+
+        --radius: 1rem;
+    }
+
+    .dark {
+        /* Keeping original dark mode or adapting? 
+       For now, let's keep the user's specific cream theme as the primary look. 
+       If they switch to dark, we might need a dark cream/stone palette. 
+       I'll map dark to a dark stone. */
+        --background: 24 10% 10%;
+        --foreground: 40 20% 96%;
+        --card: 24 10% 12%;
+        --card-foreground: 40 20% 96%;
+        --primary: 38 92% 50%;
+        --primary-foreground: 24 10% 10%;
+        --muted: 24 10% 15%;
+        --muted-foreground: 24 5% 60%;
+        --border: 24 10% 20%;
+        --input: 24 10% 20%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-[var(--bg-primary)] text-[var(--text-primary)];
+    }
+}
