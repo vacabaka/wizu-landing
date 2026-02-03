@@ -8,20 +8,21 @@ export default function Home() {
     return (
         <main className="min-h-screen bg-slate-50 flex flex-col items-center overflow-x-hidden">
             <div className="w-full max-w-[1440px] bg-white shadow-2xl shadow-indigo-100/50 min-h-screen flex flex-col">
-                {/* Navigation */}
-                <nav className="w-full px-6 py-6 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-lg z-50 border-b border-indigo-50">
-                    <div className="flex items-center gap-2">
-                        {/* Logo Placeholder */}
-                        <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">W</div>
-                        <span className="font-bold text-xl tracking-tight text-slate-900">Wizu</span>
-                    </div>
-                    <a href="#waitlist" className="bg-indigo-600 text-white px-5 py-2.5 rounded-full font-medium text-sm hover:bg-indigo-700 transition shadow-lg shadow-indigo-500/25">
-                        Join Waitlist
-                    </a>
-                </nav>
+
 
                 <AuroraBackground className="min-h-screen">
-                    <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
+                    {/* Navigation - Absolute Overlay */}
+                    <nav className="absolute top-0 left-0 right-0 p-6 flex justify-between items-center z-20 w-full max-w-7xl mx-auto">
+                        <div className="text-xl font-bold flex items-center gap-2">
+                            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-serif">W</div>
+                            Wizu
+                        </div>
+                        <a href="#waitlist" className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-colors">
+                            Get Early Access
+                        </a>
+                    </nav>
+
+                    <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-20">
                         <h1 className="font-serif text-5xl md:text-7xl tracking-tight text-[var(--text-primary)] leading-[1.1] mb-8">
                             Design your english <br />
                             <span className="text-[var(--accent-primary)] italic">made simple</span>
