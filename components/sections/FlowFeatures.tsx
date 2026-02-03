@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowDown, Video, Bot, Zap, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { BorderBeam } from "@/components/ui/border-beam";
