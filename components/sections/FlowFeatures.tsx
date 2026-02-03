@@ -3,6 +3,7 @@
 import { ArrowDown, Video, Bot, Zap, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { ScrollRevealText } from "@/components/ui/text-scroll-animation";
 
 const steps = [
     {
