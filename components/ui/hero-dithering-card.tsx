@@ -100,10 +100,7 @@ export function CTASection() {
                             </form>
                         )}
 
-                        {/* Description */}
-                        <p className="text-[var(--text-secondary)] text-lg md:text-xl max-w-2xl leading-relaxed">
-                            Join learners using the AI that understands context, culture, and nuance.
-                        </p>
+
                     </div>
                 </div>
             </div>
