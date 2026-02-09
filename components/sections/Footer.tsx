@@ -10,10 +10,10 @@ export function Footer() {
                 </div>
 
                 <div className="flex gap-8 text-sm text-slate-500 font-medium">
-                    <a href="#" className="hover:text-indigo-600 transition">Privacy</a>
+                    {/* <a href="#" className="hover:text-indigo-600 transition">Privacy</a>
                     <a href="#" className="hover:text-indigo-600 transition">Terms</a>
                     <a href="#" className="hover:text-indigo-600 transition">Twitter</a>
-                    <a href="#" className="hover:text-indigo-600 transition">Contact</a>
+                    <a href="#" className="hover:text-indigo-600 transition">Contact</a> */}
                 </div>
 
                 <p className="text-slate-400 text-sm">

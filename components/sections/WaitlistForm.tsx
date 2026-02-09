@@ -9,11 +9,26 @@ export function WaitlistForm({ variant = "light" }: { variant?: "light" | "dark"
     const [email, setEmail] = useState("");
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!email) return;
-        // Mock submission
-        setTimeout(() => setIsSubmitted(true), 800);
+
+        try {
+            const res = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email }),
+            });
+
+            if (res.ok) {
+                setIsSubmitted(true);
+            } else {
+                // handle error visually if needed, for now just log
+                console.error('Failed to submit');
+            }
+        } catch (err) {
+            console.error(err);
+        }
     };
 
     if (isSubmitted) {
@@ -35,8 +50,8 @@ export function WaitlistForm({ variant = "light" }: { variant?: "light" | "dark"
                 type="email"
                 placeholder="Enter your email"
                 className={`h-14 md:text-base ${variant === "dark"
-                        ? "bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus-visible:ring-offset-transparent focus-visible:ring-white/50"
-                        : "bg-white border-slate-200 text-slate-900"
+                    ? "bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus-visible:ring-offset-transparent focus-visible:ring-white/50"
+                    : "bg-white border-slate-200 text-slate-900"
                     }`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

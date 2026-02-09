@@ -13,10 +13,23 @@ export function CTASection() {
     const [email, setEmail] = useState("")
     const [isSubmitted, setIsSubmitted] = useState(false)
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         if (!email) return
-        setTimeout(() => setIsSubmitted(true), 800)
+
+        try {
+            const res = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email }),
+            })
+
+            if (res.ok) {
+                setIsSubmitted(true)
+            }
+        } catch (err) {
+            console.error(err)
+        }
     }
 
     return (

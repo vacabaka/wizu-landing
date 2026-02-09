@@ -58,9 +58,8 @@ export function FlowFeatures() {
                             </p>
                         </div>
 
-                        {/* Visual Card */}
-                        <div className="relative group w-full max-w-2xl">
-                            {/* Floating decorative elements */}
+                        {/* Visual Card - Hidden for now */}
+                        {/* <div className="relative group w-full max-w-2xl">
                             <div className="absolute -left-12 top-12 w-24 h-24 bg-rose-200/50 rounded-full blur-2xl -z-10 group-hover:scale-125 transition-transform duration-700" />
                             <div className="absolute -right-12 bottom-12 w-32 h-32 bg-indigo-200/50 rounded-full blur-2xl -z-10 group-hover:scale-125 transition-transform duration-700 delay-100" />
 
@@ -72,7 +71,6 @@ export function FlowFeatures() {
                             >
                                 <div className="rounded-2xl overflow-hidden aspect-[16/9] bg-slate-100 relative z-10">
                                     <div className="absolute inset-0 bg-slate-200 animate-pulse" />
-                                    {/* Using a real image here would be better but keeping simple for now */}
                                     <img src={step.imagePlaceholder} alt={step.title} className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
                                 </div>
 
@@ -84,7 +82,7 @@ export function FlowFeatures() {
                                     colorTo="#6366F1"
                                 />
                             </motion.div>
-                        </div>
+                        </div> */}
 
                     </div>
                 ))}
