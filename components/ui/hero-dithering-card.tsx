@@ -70,14 +70,9 @@ export function CTASection() {
                             <span className="text-[var(--text-secondary)] opacity-80">mastered perfectly.</span>
                         </h2>
 
-                        {/* Description */}
-                        <p className="text-[var(--text-secondary)] text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
-                            Join thousands of learners using the AI that understands context, culture, and nuance.
-                        </p>
-
                         {/* Form */}
                         {isSubmitted ? (
-                            <div className="flex flex-col items-center animate-in fade-in zoom-in duration-500">
+                            <div className="flex flex-col items-center animate-in fade-in zoom-in duration-500 mb-12">
                                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-md border border-green-500/30">
                                     <ArrowRight className="w-8 h-8 text-green-600 rotate-[-45deg]" /> {/* Checkmark-ish */}
                                 </div>
@@ -85,7 +80,7 @@ export function CTASection() {
                                 <p className="text-[var(--text-secondary)] mt-2">We'll be in touch soon.</p>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="w-full max-w-md relative flex items-center">
+                            <form onSubmit={handleSubmit} className="w-full max-w-md relative flex items-center mb-12">
                                 <div className="relative w-full group">
                                     <input
                                         type="email"
@@ -104,6 +99,11 @@ export function CTASection() {
                                 </div>
                             </form>
                         )}
+
+                        {/* Description */}
+                        <p className="text-[var(--text-secondary)] text-lg md:text-xl max-w-2xl leading-relaxed">
+                            Join learners using the AI that understands context, culture, and nuance.
+                        </p>
                     </div>
                 </div>
             </div>
